@@ -40,6 +40,14 @@ function App() {
             playLists: playLists
           })
         })
+
+      spotify.getPlaylist('4596788eeaf84d1d9fdbf16b7cc40f87')
+        .then((response) => {
+          dispatch({
+            type: 'SET_DISCOVER_WEEKLY',
+            discover_weekly: response
+          })
+        })
     }
   })
 

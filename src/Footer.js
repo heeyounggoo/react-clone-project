@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+// TODO set to use globally Material Ui/Icon
 import { Grid, Slider } from '@material-ui/core'
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline'
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious'
