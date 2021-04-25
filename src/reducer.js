@@ -2,9 +2,9 @@ export const initialState = {
   user: null,
   playLists: [],
   playing: false,
-  item: null,
+  item: null
   // TODO remove after finished developing
-  token: 'BQCKkFCaWoR1FD4Te3nRnuEMtMT6qZ_hl-KWxkX4rWjnjXxHr1yKaedlI9UP2CYbdrRKpyJSmvySEh-D_qUQpU8hgxlMsN4rDRLRiecE3xTxzqGGXzHoANlImACUW4pIJNzWm3CZunhtm8cHUKIl4UeuRnGcXe-bNmRQYp8FXqJB0Xjz'
+  // token: 'BQCKkFCaWoR1FD4Te3nRnuEMtMT6qZ_hl-KWxkX4rWjnjXxHr1yKaedlI9UP2CYbdrRKpyJSmvySEh-D_qUQpU8hgxlMsN4rDRLRiecE3xTxzqGGXzHoANlImACUW4pIJNzWm3CZunhtm8cHUKIl4UeuRnGcXe-bNmRQYp8FXqJB0Xjz'
 }
 
 export default function reducer (state, action) {
@@ -21,16 +21,12 @@ export default function reducer (state, action) {
         ...state,
         token: action.token
       }
+    case 'SET_PLAYLISTS':
+      return {
+        ...state,
+        playLists: action.playLists
+      }
     default:
       return state
   }
-
-  // if (action && action.type === 'SET_USER') {
-  //   return {
-  //     ...state,
-  //     user: action.user
-  //   }
-  // } else {
-  //   return state
-  // }
 }
